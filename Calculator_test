@@ -1,0 +1,51 @@
+
+using System.Diagnostics;
+
+static void calc(){
+    float y;
+float x;
+string a;
+Console.WriteLine("Please enter two numbers");
+x= float.Parse(Console.ReadLine());
+y= float.Parse(Console.ReadLine());
+
+Console.WriteLine("what do you want to do?");
+Console.WriteLine("Please choose: +,-,*,/");
+a= Console.ReadLine();
+
+switch(a){
+    case "+":
+     Console.WriteLine($"sum={x}+{y}={x+y}");
+      break;
+       case "-":
+     Console.WriteLine($"subtraction={x}-{y}={x-y}");
+      break;
+       case "*":
+     Console.WriteLine($"Multiple={x}*{y}={x*y}");
+      break;
+       case "/":
+       if(y==0){
+        Console.WriteLine("Cant divide by zero");
+       }
+     Console.WriteLine($"Division={x}/{y}={x/y}");
+      break;
+
+}
+}
+calc();
+   while(true){
+    string a;
+    Console.WriteLine("If you want to exit press: exit\n press any key to continue");
+    a= Console.ReadLine();
+    if(a=="exit")
+    {
+          Environment.Exit(1);
+    }
+    else{
+        Console.Clear();
+    }
+    calc();
+
+   }
+
+
